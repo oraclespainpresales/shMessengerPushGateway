@@ -172,7 +172,7 @@ async.series( {
 
       log.verbose(REST, "Request for user %s: %j", req.params.socialid, req.body)
 
-      var URI = util.format(GETUSERURI, req.params.socialid);
+      var URI = util.format(GETUSERURI, encodeURIComponent(req.params.socialid));
       dbClient.get(URI, function(_err, _req, _res, _obj) {
         if (_err) {
           log.error(DB, _err.message);
