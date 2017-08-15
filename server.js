@@ -12,7 +12,7 @@ var log = require('npmlog-ts')
   , _ = require('lodash')
   , commandLineArgs = require('command-line-args')
   , getUsage = require('command-line-usage')
-  , FBMessenger = require('fb-messenger');
+  , FBMessenger = require('fb-messenger')
   , basicAuth = require('express-basic-auth')
   , passwordHash = require('password-hash')
 ;
