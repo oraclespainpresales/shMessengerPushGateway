@@ -25,8 +25,8 @@ const PROCESSNAME = "Wedo Hospitality Demo - Facebook Messenger Push Gateway"
     , REST     = 'REST'
     , DB       = 'DB'
     , FACEBOOK = 'FACEBOOK'
-    , username = 'admin';
-    , hashedPassword = 'sha1$13c9bd8d$1$84c1280f31e01d62bb77d7e3b17c2333086d8042';
+    , username = 'admin'
+    , hashedPassword = 'sha1$13c9bd8d$1$84c1280f31e01d62bb77d7e3b17c2333086d8042'
 ;
 
 log.timestamp = true;
