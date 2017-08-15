@@ -24,9 +24,11 @@
     "command-line-usage": "^4.0.1",
     "cors": "^2.8.4",
     "express": "^4.15.4",
+    "express-basic-auth": "^1.1.2",
     "fb-messenger": "^1.1.0",
     "lodash": "^4.17.4",
     "npmlog-ts": "0.0.1",
+    "password-hash": "^1.2.2",
     "restify-clients": "^1.5.0"
   }
 }

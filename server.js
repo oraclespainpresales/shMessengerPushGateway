@@ -13,6 +13,8 @@ var log = require('npmlog-ts')
   , commandLineArgs = require('command-line-args')
   , getUsage = require('command-line-usage')
   , FBMessenger = require('fb-messenger');
+  , basicAuth = require('express-basic-auth')
+  , passwordHash = require('password-hash')
 ;
 
 // Misc BEGIN
@@ -23,6 +25,8 @@ const PROCESSNAME = "Wedo Hospitality Demo - Facebook Messenger Push Gateway"
     , REST     = 'REST'
     , DB       = 'DB'
     , FACEBOOK = 'FACEBOOK'
+    , username = 'admin';
+    , hashedPassword = 'sha1$13c9bd8d$1$84c1280f31e01d62bb77d7e3b17c2333086d8042';
 ;
 
 log.timestamp = true;
@@ -145,6 +149,7 @@ async.series( {
     log.info(REST, "Initializing REST Server");
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json());
+    app.use(basicAuth( { authorizer: myAuthorizer } ));
     app.use(cors());
     app.use(CONTEXTROOT, router);
     router.post(SENDURI, function(req, res) {
@@ -237,3 +242,7 @@ async.series( {
     log.info(PROCESS, 'Initialization completed');
   }
 });
+
+function myAuthorizer(_username, _password) {
+    return (_username === username) && passwordHash.verify(_password, hashedPassword);
+}
