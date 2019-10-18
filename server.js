@@ -109,7 +109,7 @@ var app    = express()
 // Initializing REST & WS variables END
 
 // Facebook stuff
-const token       = 'EAAFCo0ZB9MN4BAF3DPAT76WwsTeORmYBZCb7cCvVKlDZBqHOVTNHx7ObdYByMQDY5bTnShmjyceZAcqSSSZCtwjgZBeIoVHwOTWuXrFyB48zNWRwndjZAlrTJJVNydqkK7WRHZB5ky0ZBOnlptyXo1ZAIAbBnbUEBuOp57Q5IFZCzDoDwZDZD'
+const token       = 'EAAFCo0ZB9MN4BAA1UXSVfjXqMl9DeOHz5atZCTYzFc5W1lInNiGlYfUZBpDpAJfQ1vjU0YkB3pr0sctAx0eTU6e5DtL8ksaZCdUYX5XyVugHzUOuhEFznp9ZCdZA4uxNQW6lTT6ORK2f6ZC1zJHUO24MuICYOcwpZAPkSykl2CT9kZAtA9FmXdnb0'
     , REGULAR     = 'REGULAR'
     , SILENT_PUSH = 'SILENT_PUSH'
     , NO_PUSH     = 'NO_PUSH'
